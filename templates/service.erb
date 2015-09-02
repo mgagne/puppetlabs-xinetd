@@ -10,8 +10,10 @@ service <%= @service_name %>
         wait            = <%= @_wait %>
         user            = <%= @user %>
         group           = <%= @group %>
-        groups          = <%= @groups %>
+	groups          = <%= @groups %>
+<% if @server -%>
         server          = <%= @server %>
+<% end -%>
 <% if @bind -%>
         bind            = <%= @bind %>
 <% end -%>
